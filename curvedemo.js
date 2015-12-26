@@ -1,6 +1,8 @@
-function Normalgraph( k,a ) { //function
+//function which calculate data points through formula.
+
+function Normalgraph( k,a ) { 
  var d= ((a*k) + (2*a)-Math.sqrt((a*a)*(k*k) +(4*k) + 4));
- var f=-1/2*(d)/(k+1); //calculate d point for ploting 
+ var f=-1/2*(d)/(k+1);   //calculate d point for ploting 
 return f;
   }
  
@@ -12,7 +14,7 @@ var chartData = [];
 for ( var k = 0; k < 100; k += 1 ) {
   var p1 = {
     category: k,
-    value: Normalgraph( k,0.05), //Call function 
+    value: Normalgraph( k,0.05), // function Call 
     value2: Normalgraph( k,0.10),
     value3: Normalgraph( k,0.15),
     value4: Normalgraph( k,0.20),
@@ -20,7 +22,7 @@ for ( var k = 0; k < 100; k += 1 ) {
     value6: Normalgraph( k,0.30)
   };
   
-  chartData.push( p1 );   //ploting curve 1
+  chartData.push( p1 );   //ploting Here.
 }
                  
         
@@ -32,8 +34,8 @@ var chart = AmCharts.makeChart( "chartdiv", {
   "theme": "light",
   "dataProvider": chartData,
   "precision": 2,
- //show title for each line
 
+ //Legend shows Label on right side and their changing values.
   "legend": {
     "horizontalGap": 10,
     "useGraphSettings": true,
@@ -41,12 +43,8 @@ var chart = AmCharts.makeChart( "chartdiv", {
    "position":"right"
   },
 
-/*  "xAxis":{
-  "title":"k"
-},*/
-
   "valueAxes": [ {
-  "title":"d/A",
+  "title":"d/A",   //show LabelName on Yaxis.
   "gridAlpha": 0.2,
   "dashLength": 0,
 } ],
@@ -121,18 +119,17 @@ var chart = AmCharts.makeChart( "chartdiv", {
 "balloon": {
     "borderThickness": 4,
     "horizontalPadding": 8,
-  //  "offsetX": 50,
-    //"offsetY": 8
-   "pointerWidth":10
+    "pointerWidth":10
 },
 
   "categoryField": "category",
-  "categoryAxis": {
+    "categoryAxis": {
     "gridAlpha": 0.05,
     "startOnAxis": true,
     "tickLength": 5,
+    "title":"k",        //show LabelName on Xaxis.
     "labelFunction": function( label, item ) {
-      return '' + Math.round( item.dataContext.category * 10 ) / 10;
+     return '' + Math.round( item.dataContext.category * 10 ) / 10;
     }
   }
 
