@@ -1,6 +1,6 @@
 # JavascriptGraphs
-I created  Interactive  graphs using javascript and Amchart liberay.
-Intracting graphs  shows data points at partcular point whereever user move mouse pointer.
+I created  Interactive  graphs using javascript and Amchart library.
+Inetractive graphs shows data points at partcular point whenever user move mouse pointer.
 
 Requirements:
 -----------------------------
