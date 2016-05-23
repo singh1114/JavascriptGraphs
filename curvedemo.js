@@ -51,13 +51,15 @@ var chart = AmCharts.makeChart( "chartdiv", {
   "dashLength": 0,
 } ],
 
+
+//For showing label name on both Axis
 /*"valueAxes": [ {
     "position": "left",
     "title": "Y axis"
   }, {
     "position": "bottom",
     "title": "X axis"
-  } ], */
+  } ], */ 
 
 
   "titles":[{
@@ -131,6 +133,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "gridAlpha": 0.05,
     "startOnAxis": true,
     "tickLength": 5,
+    "title":"k",
     "labelFunction": function( label, item ) {
       return '' + Math.round( item.dataContext.category * 10 ) / 10;
     }
