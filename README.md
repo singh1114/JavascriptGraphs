@@ -7,7 +7,7 @@ Requirements:
      1) Download Amchart liberary http://www.amcharts.com/download/.
      2) Add link of .js library in your  html file. 
      
-To see output go to link:http://manpreet9112.github.io/JavascriptGraphs     
+To see output go to link:http://manpreet9112.github.io/JavascriptGraphs/curvedemo.html   
     
 OR
 --------------------------
