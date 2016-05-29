@@ -1,4 +1,4 @@
-# JavascriptGraphs
+# Interactive Graph
 I created  Interactive  graphs using javascript and Amchart library.
 Inetractive graphs shows data points at partcular point whenever user move mouse pointer.
 
