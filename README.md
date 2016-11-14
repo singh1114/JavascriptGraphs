@@ -8,18 +8,16 @@ manually as per requirement). and the variable according to your point y.
 Inetractive graphs shows data points at partcular point on a specific location. 
 Example. where you want to check the value, you have to just locate this poit with your cursor.  
 You can apply any mathamatics formula in this Graph. 
+
 Requirements:
 -----------------------------
-     1) Download Amchart liberary http://www.amcharts.com/download/.
+     1) Download Amchart library http://www.amcharts.com/download/.
      2) Add link of .js library in your  html file.
      
-To see output go to link:http://manpreet9112.github.io/JavascriptGraphs/curvedemo.html   
+To see output go to 
+link:http://manpreet9112.github.io/JavascriptGraphs/curvedemo.html   
 
----------------------------
--Clone this repository https://github.com/manpreet9112/JavascriptGraphs and
--run its html file in browser.To see output go to link:http://manpreet9112.github.io/JavascriptGraphs/curvedemo.html  
+OR
+----------------------------
 
----------------------------
--Clone this repository https://github.com/manpreet9112/JavascriptGraphs and
--run its html file in browser.
-- link you .js File 
+Clone this repository https://github.com/manpreet9112/JavascriptGraphs and run its .html file in browser.
