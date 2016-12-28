@@ -1,28 +1,38 @@
 //function which calculate data points through formula.
 
-function Normalgraph( k,a ) { 
- var d= ((a*k) + (2*a)-Math.sqrt((a*a)*(k*k) +(4*k) + 4));
- var f=-1/2*(d)/(k+1);   //calculate d point for ploting 
-return f;
+function Normalgraph(k,a) { 
+  var f = data["yfunction"];   //calculate d point for ploting 
+  f = eval(f);
+  return f;
   }
  
 
 /**
  * Calculate data
  */
+
+// Initialize the chartData to store the details of the graph
 var chartData = [];
-for ( var k = 0; k < 100; k += 1 ) {
+
+// length is the number of lines that we want to make.
+var length = data["constants"]["constant1"].length;
+
+// The x in the equation y = f(x)
+var xAxisTitle = data["xAxisTitle"];
+
+for(var k = 0; k < 100; k += 1){
+  var x = length; 
   var p1 = {
     category: k,
-    value: Normalgraph( k,0.05), // function Call 
-    value2: Normalgraph( k,0.10),
-    value3: Normalgraph( k,0.15),
-    value4: Normalgraph( k,0.20),
-    value5: Normalgraph( k,0.25),
-    value6: Normalgraph( k,0.30)
   };
-  
-  chartData.push( p1 );   //ploting Here.
+  for(let temp = 0; temp < length; temp++){
+    var constantValues = data["constants"]["constant1"][temp]["value" + (temp+1)];
+    var executeFunction = Normalgraph(eval(xAxisTitle), eval(constantValues));
+    var string = "value" + (temp+1) + ": " + executeFunction;
+    p1["value" + (temp+1)] = executeFunction;
+  }
+  chartData.push(p1);
+  //chartData.push(p1);   //ploting Here.
 }
                  
         
@@ -40,14 +50,14 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "horizontalGap": 10,
     "useGraphSettings": true,
     "markerSize": 16,
-   "position":"right"
+    "position":"right"
   },
 
-  "valueAxes": [ {
-  "title":"d/A",   //show LabelName on Yaxis.
-  "gridAlpha": 0.2,
-  "dashLength": 0,
-} ],
+  "valueAxes": [{
+    "title": data["yAxisTitle"],   //show LabelName on Yaxis.
+    "gridAlpha": 0.2,
+    "dashLength": 0,
+  }],
 
 /*"valueAxes": [ {
     "position": "left",
@@ -59,7 +69,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
 
 
   "titles":[{
-      "text":"DesignAids Graph"
+      "text":data["graphTitle"]
   }],
 
   "startDuration":1,
@@ -68,7 +78,7 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "balloonText": "<b>k: [[category]]<br/>d/A:[[value]]</b>",
     "lineThickness": 3,
     "title":"a/A=0.05",
-    "valueField": "value",
+    "valueField": "value1",
          
   }, {
     "id":"g2",       

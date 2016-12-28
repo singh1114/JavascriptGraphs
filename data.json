@@ -1,0 +1,21 @@
+data = {
+	"graphTitle": "DesignAids Graph",
+	"yfunction": "-1/2*(((a*k) + (2*a)-Math.sqrt((a*a)*(k*k) +(4*k) + 4)))/(k+1)",
+	"yAxisTitle": "d/A",
+	"xAxisTitle": "k",
+	"numberOfConstants": 1, 
+	"lowerBoundX": 0,
+	"upperBoundX": 100,
+	"constants": {
+		"constant1":[
+			{"value1": 0.05},
+			{"value2": 0.10},
+			{"value3": 0.15},
+			{"value4": 0.20},
+			{"value5": 0.25},
+			{"value6": 0.30},
+		],
+	}
+
+
+}
